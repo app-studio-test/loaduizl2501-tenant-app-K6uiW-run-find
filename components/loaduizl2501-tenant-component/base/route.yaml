@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loaduizl2501-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loaduizl2501-tenant-component
+    app.kubernetes.io/part-of: loaduizl2501-tenant-app
+  name: loaduizl2501-tenant-component
+  namespace: loaduizl2501-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: loaduizl2501-tenant-component
+    weight: null
+status: {}
